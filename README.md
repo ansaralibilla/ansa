@@ -26,10 +26,11 @@ This repository is a starter scaffold for an Android application that:
 
 ## Next steps
 
-1. Implement `EmbroideryParser` using your chosen library.
-2. Add a `DesignSurfaceView` or `Compose` canvas for rendering.
-3. Wire file pickers to load, preview, and export designs.
-4. Add tests for format support and metadata extraction.
+1. Implement `EmbroideryParser` using your chosen library and map supported formats to `EmbroideryFormat`.
+2. Add a `DesignSurfaceView` or `Compose` canvas for both render modes (`TRUE_VIEW` + `STITCH_VIEW`).
+3. Wire file pickers (SAF) to load designs and export conversions via `EmbroideryRepository`.
+4. Provide a conversion/export screen that lets users select target format and save the output file.
+5. Add tests for format support, metadata extraction, and conversion fidelity.
 
 ## Build / assemble
 
