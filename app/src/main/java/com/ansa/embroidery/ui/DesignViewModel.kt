@@ -9,9 +9,13 @@ class DesignViewModel : ViewModel() {
     private val _viewState = MutableLiveData(
         DesignDetailsViewState(
             detailsText = "Open a DST/PES/JEF/EXP file to view metadata and preview stitches.",
+            design = null,
         ),
     )
     val viewState: LiveData<DesignDetailsViewState> = _viewState
+
+    val currentDesign: EmbroideryDesign?
+        get() = _viewState.value?.design
 
     fun onDesignLoaded(design: EmbroideryDesign) {
         val metadata = design.metadata
@@ -22,6 +26,6 @@ class DesignViewModel : ViewModel() {
             appendLine("Color changes: ${metadata.colorChanges}")
             appendLine("Stops: ${metadata.stopCount}")
         }
-        _viewState.value = DesignDetailsViewState(detailsText = details.trim())
+        _viewState.value = DesignDetailsViewState(detailsText = details.trim(), design = design)
     }
 }

@@ -12,6 +12,7 @@ This repository is a starter scaffold for an Android application that:
 - **Parsing + conversion**: integrate a library such as:
   - [EmbroideryIO](https://github.com/EmbroidePy/embroideryio) (Java-based), or
   - [libembroidery](https://github.com/Embroidermodder/libembroidery) via JNI.
+  - The current `SimpleEmbroideryParser` is a lightweight placeholder that returns synthetic data.
 - **Rendering**:
   - Use a custom `Bitmap` renderer for stitch view (draw lines and jumps).
   - Use an offscreen canvas + fill logic for true view.
